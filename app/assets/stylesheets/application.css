@@ -83,8 +83,8 @@ a, p, h1, h2, h3, h4, label, input, form, button, td {
 .myButton {
 	display: block;
 	padding: 10px;
-	padding-top: 15px;
-	padding-bottom: 15px;
+	padding-top: 45px;
+	padding-bottom: 45px;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 500;
 	border: 1px solid #FFFFFF;
@@ -99,7 +99,6 @@ a, p, h1, h2, h3, h4, label, input, form, button, td {
 
 td {
 	width: 200px;
-	height: 50px;
 	text-align: center;
 }
 
@@ -126,9 +125,9 @@ td {
 	cursor: pointer;
 	background-color: #64918b;
 	display: block;
-	width: 50%;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	width: 102%;
+	padding-top: 15px;
+	padding-bottom: 15px;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 500;
 	font-size: 18px;
