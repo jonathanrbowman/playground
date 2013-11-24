@@ -1,4 +1,14 @@
-<h2>Hello World</h2>
-<p>
-  The time is now: <%= Time.now %>
-</p>
+<h2>Welcome to the Best Practice Store Project Manager</h2>
+<% if user_signed_in?%>
+
+<%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "myButton", id: "signOut" %>
+<%= link_to "Edit Account", edit_user_registration_path, class: "myButton", id: "editAccount" %>
+<%= link_to "Create Project", new_project_path, class: "myButton", id: "newProject" %>
+<%= link_to "View Projects", projects_path, class: "myButton", id: "viewProjects" %>
+
+<% else %>
+
+<%= link_to "Sign in", new_user_session_path, class: "myButton", id: "signIn" %>
+<%= link_to "Sign up", new_user_registration_path, class: "myButton", id: "signUp" %>
+
+<% end %>

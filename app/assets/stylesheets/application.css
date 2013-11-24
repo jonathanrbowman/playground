@@ -11,3 +11,28 @@
  *= require_self
  *= require_tree .
  */
+
+a, p, h1, h2, h3, h4, label, input, form, button {
+	font-family: 'Raleway', sans-serif;
+	color: #333333;
+	-webkit-transition: .15s ease-in-out;
+	-moz-transition: .15s ease-in-out;
+	-o-transition: .15s ease-in-out;
+	transition: .15s ease-in-out;
+}
+
+.myButton {
+	width: 75px;
+	height: 100px;
+	border: 1px solid #333333;
+	text-decoration: none;
+	padding: 10px;
+	margin: 10px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+}
+
+.myButton:hover {
+	background-color:#333333;
+	color:white;
+}
