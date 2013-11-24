@@ -1,42 +1,59 @@
-<% if user_signed_in?%>
+<% if user_signed_in? %>
 
-
-<h1>Listing projects</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Price</th>
-      <th>Category</th>
-      <th>Description</th>
-      <th>Developer</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.title %></td>
-        <td><%= project.price %></td>
-        <td><%= project.category %></td>
-        <td><%= project.description %></td>
-        <td><%= project.user.user_company if project.user %></td>
-        <td><%= link_to 'View', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Remove', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+<table id="headerControlsWrapper">
+	<tr>
+		<td><%= link_to "Sign out?", destroy_user_session_path, method: :delete, id: "headerSignOut" %></td>
+	</tr>
+	<tr>
+		<td><%= link_to "Modify Account", edit_user_registration_path, id: "headerModify" %></td>
+	</tr>
+	<tr>
+		<td id="signedInAs"> + Signed in as <%= current_user.username %>. </td>
+	</tr>
 </table>
 
+<div id="internalLogoWrapper">
+	<a href="/"> <img id="internalLogo" src="http://files.bestpracticestore.com/files/images/bpslogowhiteclear.png"></a>
+</div>
+
+<p id="tagline">
+	Select a Guide to Edit or Create a New One
+</p>
+
+<div id="projectList">
+
+	<table class="projectBox">
+		<div id="newProjectButtonWrapper">
+			<%= link_to '+ Create a new Best Practice Guide', new_project_path, class: "projectButton", id: "newProjectButton" %>
+		</div>
+		<% @projects.each do |project| %>
+		<% if current_user == project.user%>
+		<tr>
+			<td id="projectTitle" ><%= link_to project.title, project, class: "projectButton", id: project.category.gsub(/\s+/, "") %></td>
+			<td id="viewProject"><%= link_to 'View', project, class: "projectButton" %></td>
+			<td id="editProject"><%= link_to 'Edit', edit_project_path(project), class: "projectButton" %></td>
+			<td id="removeProject"><%= link_to 'Remove', project, class: "projectButton", id: "rmButton", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		</tr>
+		<% end %>
+		<% end %>
+	</table>
+</div>
+
+<!--
+<% @projects.each do |project| %>
+<tr>
+<td><%= project.title %></td>
+<td><%= project.price %></td>
+<td><%= project.category %></td>
+<td><%= project.description %></td>
+<td><%= project.user.user_company if project.user %></td>
+<td><%= link_to 'View', project %></td>
+<td><%= link_to 'Edit', edit_project_path(project) %></td>
+<td><%= link_to 'Remove', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
+<% end %>
+-->
 <br>
-
-<%= link_to 'New Project', new_project_path %>
-
 
 <% else %>
 

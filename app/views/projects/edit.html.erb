@@ -1,6 +1,28 @@
-<h1>Editing project</h1>
+<% if user_signed_in? && current_user == @project.user %>
 
+<table id="headerControlsWrapper">
+	<tr>
+		<td><%= link_to "Sign out?", destroy_user_session_path, method: :delete, id: "headerSignOut" %></td>
+	</tr>
+	<tr>
+		<td><%= link_to "Modify Account", edit_user_registration_path, id: "headerModify" %></td>
+	</tr>
+	<tr>
+		<td id="signedInAs"> + Signed in as <%= current_user.username %>. </td>
+	</tr>
+</table>
+
+<div id="internalLogoWrapper">
+	<a href="/"> <img id="internalLogo" src="http://files.bestpracticestore.com/files/images/bpslogowhiteclear.png"></a>
+</div>
+
+<div id="createProjectWrapper">
+	
 <%= render 'form' %>
 
-<%= link_to 'Show', @project %> |
-<%= link_to 'Back', projects_path %>
+<%= link_to 'View', @project %> |
+<%= link_to 'Guide List', projects_path %>
+
+</div>
+
+<% end %>

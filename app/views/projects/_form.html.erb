@@ -11,30 +11,27 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="inputWrapper">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "inputField", class: "shortField"%>
   </div>
   
-  <div class="field">
-    <%= f.label :image %>
-    <%= f.file_field :image %>
+  <div class="inputWrapper">
+    <%= f.label :price %> (written such as 100.00)<br>
+    <%= f.number_field :price, class: "inputField", class: "shortFieldPrice" %>
   </div>
-  
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.number_field :price %>
-  </div>
-  <div class="field">
+  <div class="inputWrapper">
     <%= f.label :category %><br>
-    <%= f.select :category, options_for_select(%w[Compliance Technology Marketing]) %>
+    <%= f.select :category, ['Compliance','Revenue Cycle','Technology','Clinical','Safety','Patient Satisfaction','Strategy','Marketing'] %>
   </div>
   
-  <div class="field">
+  <div class="inputWrapper">
     <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, class: "inputField" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  
+  <div class="inputWrapper">
+    <%= f.submit "Save Best Practice Guide", class: "signInButton" %>
   </div>
+  
 <% end %>

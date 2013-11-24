@@ -1,4 +1,8 @@
 class Project < ActiveRecord::Base
+  
+  def title=(val)
+    self[:title] = val.titleize
+  end
 
   belongs_to :user
 

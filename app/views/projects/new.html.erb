@@ -1,13 +1,35 @@
 <% if user_signed_in?%>
 
-<h1>New project</h1>
+	<table id="headerControlsWrapper">
+			<tr>
+				<td><%= link_to "Sign out?", destroy_user_session_path, method: :delete, id: "headerSignOut" %></td>
+			</tr>
+			<tr>
+				<td><%= link_to "Modify Account", edit_user_registration_path, id: "headerModify" %></td>
+			</tr>
+			<tr>
+				<td id="signedInAs"> + Signed in as <%= current_user.username %>. </td>
+			</tr>
+		</table>
 
+<div id="internalLogoWrapper">
+	<a href="/"> <img id="internalLogo" src="http://files.bestpracticestore.com/files/images/bpslogowhiteclear.png"></a>
+</div>
+
+<p id="tagline" style="font-size:18px;">Please fill out all fields to create a new guide. You will be able to edit it at any time if you wish to change something. If you have any questions, please email <a class="myLink" href="mailto:jonathan@bestpracticestore.com?subject=Question regarding project submission">Jonathan Bowman</a> for support.</p>
+
+<div id="createProjectWrapper">
+	
 <%= render 'form' %>
 
-<%= link_to 'Back', projects_path %>
+
+  <div class="inputWrapper">
+    <%= link_to 'Cancel and lose progress', projects_path, class: "signInButton", id: "cancelButton" %>
+  </div>
 
 <% else %>
 
 <script type="text/javascript">window.location.href = "/"</script>
 
 <% end %>
+</div>

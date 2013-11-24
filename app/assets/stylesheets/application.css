@@ -23,6 +23,12 @@ body {
 	padding: 0;
 }
 
+textarea {
+	resize:none;
+	padding:10px;
+	min-height:100px;
+}
+
 a, p, h1, h2, h3, h4, label, input, form, button, td {
 	font-family: 'Raleway', sans-serif;
 	color: #FFFFFF;
@@ -70,6 +76,17 @@ a, p, h1, h2, h3, h4, label, input, form, button, td {
 	text-align: center;
 	font-size: 24px;
 	font-weight: 300;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.myLink {
+	color: #333333;
+}
+
+.myLink:hover {
+	color: #dda676;
 }
 
 #frontpageButtonWrapper {
@@ -115,6 +132,7 @@ td {
 }
 
 .inputField {
+	padding:10px;
 	width: 100%;
 	height: 25px;
 	border-radius: 0px;
@@ -125,7 +143,7 @@ td {
 	cursor: pointer;
 	background-color: #64918b;
 	display: block;
-	width: 102%;
+	width: 50%;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	font-family: 'Raleway', sans-serif;
@@ -134,8 +152,252 @@ td {
 	border: 1px solid #FFFFFF;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 500;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#cancelButton {
+	cursor: pointer;
+	background-color: #64918b;
+	display: block;
+	width: 50%;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	border: 1px solid #FFFFFF;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	margin-left: auto;
+	margin-right: auto;
+	text-align:center;
 }
 
 .signInButton:hover {
 	background-color: #333333;
+}
+
+#cancelButton:hover {
+	background-color: rgba(225,93,106, 1);
+}
+
+#internalLogoWrapper {
+	width: 220px;
+	margin-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#internalLogo {
+	width: 100%;
+}
+
+#projectList {
+	margin-top: 40px;
+	width: 70%;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.projectBox {
+	border: 3px solid white;
+	border-collapse: collapse;
+	min-height: 120px;
+	background-color: white;
+}
+
+#projectTitle {
+	width: 1000px;
+	font-weight: 600;
+}
+
+#viewProject, #editProject, #removeProject {
+	width: 16%;
+}
+
+.projectButton {
+	display: block;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background-color: #64918b;
+}
+
+.projectButton:hover {
+	background-color: #333333;
+	-webkit-transition: .15s ease-in-out;
+	-moz-transition: .15s ease-in-out;
+	-o-transition: .15s ease-in-out;
+	transition: .15s ease-in-out;
+}
+
+#newProject:hover {
+	background-color: #dda676;
+}
+
+#newProjectButtonWrapper {
+	border: 3px solid white;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#newProjectButton {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-left: 75px;
+	padding-right: 75px;
+	font-size: 24px;
+}
+
+#newProjectButton:hover {
+	background-color: #dda676;
+}
+
+#rmButton:hover {
+	background-color: rgba(225,93,106, 1);
+}
+
+#Technology {
+	background-color: rgba(225,93,106, .8);
+}
+
+#Technology:hover {
+	background-color: rgba(225,93,106, 1);
+}
+
+#Compliance {
+	background-color: rgba(105,157,200, .8);
+}
+
+#Compliance:hover {
+	background-color: rgba(105,157,200, 1);
+}
+
+#RevenueCycle {
+	background-color: rgba(72,189,160, .8);
+}
+
+#RevenueCycle:hover {
+	background-color: rgba(72,189,160, 1);
+}
+
+#Clinical {
+	background-color: rgba(110,190,82, .8);
+}
+
+#Clinical:hover {
+	background-color: rgba(110,190,82, 1);
+}
+
+#Safety {
+	background-color: rgba(242,198,80, .8);
+}
+
+#Safety:hover {
+	background-color: rgba(242,198,80, 1);
+}
+
+#PatientSatisfaction {
+	background-color: rgba(98,198,200, .8);
+}
+
+#PatientSatisfaction:hover {
+	background-color: rgba(98,198,200, 1);
+}
+
+#Strategy {
+	background-color: rgba(191,116,175, .8);
+}
+
+#Strategy:hover {
+	background-color: rgba(191,116,175, 1);
+}
+
+#Marketing {
+	background-color: rgba(232,146,86, .8);
+}
+
+#Marketing:hover {
+	background-color: rgba(232,146,86, 1);
+}
+
+form input[type='number']::-webkit-outer-spin-button, form input[type='number']::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+#createProjectWrapper {
+	width: 70%;
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.shortField {
+	padding:10px;
+	width: 50%;
+	height: 25px;
+	min-width: 200px;
+	font-size: 18px;
+	color: #333333;
+}
+
+.shortFieldPrice {
+	padding:10px;
+	width: 15%;
+	min-width: 100px;
+	height: 25px;
+	font-size: 18px;
+	color: #333333;
+}
+
+#headerControlsWrapper {
+	border-collapse: collapse;
+	position: fixed;
+	top: -85px;
+	right: 0;
+	padding: 10px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	text-align: center;
+	-webkit-transition: .15s ease-in-out;
+	-moz-transition: .15s ease-in-out;
+	-o-transition: .15s ease-in-out;
+	transition: .15s ease-in-out;
+}
+
+#signedInAs {
+	background-color: rgba(255,255,255,.3);
+	width: 100%;
+	height: 50px;
+	vertical-align: middle;
+}
+
+#signOut:hover {
+	background-color: rgba(225,93,106, 1);
+	
+}
+
+#headerSignOut {
+	background-color: rgba(225,93,106, 1);
+	opacity:.7;
+	display: block;
+	padding: 10px;
+}
+
+#headerSignOut:hover {
+	opacity:1;
+}	
+
+#headerModify {
+	background-color: rgba(105,157,200, .7);
+	opacity:.7;
+	display: block;
+	padding: 10px;
+}
+
+#headerModify:hover {
+	background-color: rgba(105,157,200, 1);
+	opacity:1;
 }
