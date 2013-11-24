@@ -1,16 +1,40 @@
-<h2>Welcome to the Best Practice Store Project Manager</h2>
+<div id="frontPageWrapper">
+	
+<div id="frontpageLogoWrapper">
+<img id="frontpageLogo" src="http://files.bestpracticestore.com/files/images/bpslogowhiteclear.png">
+</div>
+
+<p id="tagline">Project Manager Development Tool</p>
+
+<table id="frontpageButtonWrapper">
+	
 <% if user_signed_in?%>
 
-<%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "myButton", id: "signOut" %>
-<%= link_to "Edit Account", edit_user_registration_path, class: "myButton", id: "editAccount" %>
-<%= link_to "Create Project", new_project_path, class: "myButton", id: "newProject" %>
-<%= link_to "View Projects", projects_path, class: "myButton", id: "viewProjects" %>
+<th></th>
+<th></th>
+
+<tr>
+<td><%= link_to "Create Project", new_project_path, id: "newProject", class: "myButton" %></td>
+<td><%= link_to "View Projects", projects_path, id: "viewProjects", class: "myButton" %></td>
+</tr>
+
+<tr>
+<td><%= link_to "Edit Account", edit_user_registration_path, id: "editAccount", class: "myButton" %></td>
+<td><%= link_to "Sign out", destroy_user_session_path, method: :delete, id: "signOut", class: "myButton" %></td>
+</tr>
 
 <% else %>
 
-<%= link_to "Sign in", new_user_session_path, class: "myButton", id: "signIn" %>
-<%= link_to "Sign up", new_user_registration_path, class: "myButton", id: "signUp" %>
+<th></th>
+<th></th>
+
+<tr>
+<td><%= link_to "Sign in", new_user_session_path, id: "signIn", class: "myButton" %></td>
+<td><%= link_to "Sign up", new_user_registration_path, id: "signUp", class: "myButton" %></td>
+</tr>
 
 <% end %>
 
-<img src="assets/anything.png" />
+</table>
+
+</div>

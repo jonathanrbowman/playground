@@ -12,27 +12,131 @@
  *= require_tree .
  */
 
-a, p, h1, h2, h3, h4, label, input, form, button {
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #64918b;
+	margin: 0;
+	padding: 0;
+}
+
+a, p, h1, h2, h3, h4, label, input, form, button, td {
 	font-family: 'Raleway', sans-serif;
-	color: #333333;
+	color: #FFFFFF;
 	-webkit-transition: .15s ease-in-out;
 	-moz-transition: .15s ease-in-out;
 	-o-transition: .15s ease-in-out;
 	transition: .15s ease-in-out;
+	text-decoration: none;
+}
+
+.notice, .alert {
+	opacity: 0;
+	width: 100%;
+	text-align: center;
+	color: white;
+	position: fixed;
+	top: -10px;
+	-webkit-transition: .25s ease-in-out;
+	-moz-transition: .25s ease-in-out;
+	-o-transition: .25s ease-in-out;
+	transition: .25s ease-in-out;
+}
+
+#frontPageWrapper {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 100px;
+	padding-bottom: 50px;
+}
+
+#frontpageLogoWrapper {
+	width: 100%;
+	max-width: 300px;
+	height: 188px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#frontpageLogo {
+	width: 100%;
+}
+
+#tagline {
+	text-align: center;
+	font-size: 24px;
+	font-weight: 300;
+}
+
+#frontpageButtonWrapper {
+	width: 100%;
+	max-width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
 }
 
 .myButton {
-	width: 75px;
-	height: 100px;
-	border: 1px solid #333333;
-	text-decoration: none;
+	display: block;
 	padding: 10px;
-	margin: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	border: 1px solid #FFFFFF;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 500;
 }
 
 .myButton:hover {
-	background-color:#333333;
-	color:white;
+	background-color: #333333;
+	color: white;
+}
+
+td {
+	width: 200px;
+	height: 50px;
+	text-align: center;
+}
+
+#signInWrapper {
+	width: 100%;
+	max-width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+}
+
+.inputWrapper {
+	margin-top: 10px;
+}
+
+.inputField {
+	width: 100%;
+	height: 25px;
+	border-radius: 0px;
+	font-size: 18px;
+	color: #333333;
+}
+.signInButton {
+	cursor: pointer;
+	background-color: #64918b;
+	display: block;
+	width: 50%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	border: 1px solid #FFFFFF;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+}
+
+.signInButton:hover {
+	background-color: #333333;
 }

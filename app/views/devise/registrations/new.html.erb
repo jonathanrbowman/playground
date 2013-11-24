@@ -1,41 +1,51 @@
-<h2>Sign up</h2>
+<div id="frontPageWrapper">
+	
+<div id="frontpageLogoWrapper">
+<a href="/"> <img id="frontpageLogo" src="http://files.bestpracticestore.com/files/images/bpslogowhiteclear.png"></a>
+</div>
 
+<p id="tagline">New Developer Registration</p>
+
+<div id="signInWrapper">
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 <%= devise_error_messages! %>
 
-<div>
+<div class="inputWrapper">
 	<%= f.label :username %>
 	<br />
-	<%= f.text_field :username, :autofocus => true %>
+	<%= f.text_field :username, :autofocus => true, class: "inputField" %>
 </div>
 
-<div>
+<div class="inputWrapper">
 	<%= f.label :user_company %>
 	<br />
-	<%= f.text_field :user_company, :autofocus => true %>
+	<%= f.text_field :user_company, :autofocus => true, class: "inputField" %>
 </div>
 
-<div>
+<div class="inputWrapper">
 	<%= f.label :email %>
 	<br />
-	<%= f.email_field :email, :autofocus => true %>
+	<%= f.email_field :email, :autofocus => true, class: "inputField" %>
 </div>
 
-<div>
+<div class="inputWrapper">
 	<%= f.label :password %>
 	<br />
-	<%= f.password_field :password %>
+	<%= f.password_field :password, class: "inputField" %>
 </div>
 
-<div>
+<div class="inputWrapper">
 	<%= f.label :password_confirmation %>
 	<br />
-	<%= f.password_field :password_confirmation %>
+	<%= f.password_field :password_confirmation, class: "inputField" %>
 </div>
 
-<div>
-	<%= f.submit "Sign up" %>
+<div class="inputWrapper">
+	<%= f.submit "Sign up", class: "signInButton" %>
 </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<!-- <%= render "devise/shared/links" %> -->
+
+</div>
+</div>
