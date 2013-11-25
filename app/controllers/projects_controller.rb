@@ -28,6 +28,7 @@ class ProjectsController < ApplicationController
     @project = current_user.projects.build(project_params)
     if @project.save
       redirect_to :action => 'index', notice: 'Project was successfully created.'
+      BpsProjectNotification.new_project_added.deliver
     else
       render action: 'new'
     end
