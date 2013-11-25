@@ -154,6 +154,7 @@ td {
 	font-weight: 500;
 	margin-left: auto;
 	margin-right: auto;
+	text-align:center;
 }
 
 #cancelButton {

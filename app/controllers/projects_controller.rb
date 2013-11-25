@@ -2,7 +2,6 @@ class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
-
   # GET /projects
   # GET /projects.json
   def index
@@ -62,8 +61,8 @@ class ProjectsController < ApplicationController
 
   def correct_user
     if current_user == @project.user || current_user.email == "jonathan@bestpracticestore.com"
-    else
-    redirect_to projects_path, notice: "Not authorized to modify this project"
+      else
+      redirect_to projects_path, notice: "Not authorized to modify this project"
     end
   end
 
