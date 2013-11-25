@@ -17,7 +17,7 @@
 			<%= link_to '+ Create a new Best Practice Guide', new_project_path, class: "projectButton", id: "newProjectButton" %>
 		</div>
 		<% @projects.each do |project| %>
-		<% if current_user == project.user%>
+		<% if current_user == project.user || user.email == "jonathan@bestpracticestore.com"%>
 		<tr>
 			<td id="projectTitle" ><%= link_to project.title, project, class: "projectButton", id: project.category.gsub(/\s+/, "") %></td>
 			<td id="viewProject"><%= link_to 'View', project, class: "projectButton" %></td>

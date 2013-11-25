@@ -55,4 +55,6 @@ gem 'rails_12factor', group: :production
 
 gem 'mandrill-api'
 
+gem 'awesome_print', :group => :development
+
 ruby "2.0.0"
