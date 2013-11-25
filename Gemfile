@@ -53,4 +53,6 @@ gem 'aws-sdk', '~> 1.20.0'
 
 gem 'rails_12factor', group: :production
 
+gem 'mandrill-api'
+
 ruby "2.0.0"

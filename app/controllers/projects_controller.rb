@@ -29,6 +29,7 @@ class ProjectsController < ApplicationController
     @project = current_user.projects.build(project_params)
     if @project.save
       redirect_to :action => 'index', notice: 'Project was successfully created.'
+      BpsProjectNotification.new_project_added.deliver
     else
       render action: 'new'
     end
@@ -39,6 +40,7 @@ class ProjectsController < ApplicationController
   def update
     if @project.update(project_params)
       redirect_to @project, notice: 'Project was successfully updated.'
+      BpsProjectNotification.new_project_added.deliver
     else
       render action: 'edit'
     end

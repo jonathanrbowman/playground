@@ -4,6 +4,9 @@ Playground::Application.configure do
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
+  
+  config.force_ssl = true
+  
   config.cache_classes = false
 
   # Do not eager load code on boot.
@@ -29,4 +32,19 @@ Playground::Application.configure do
   
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   
+  # production.rb, test.rb, development.rb or application.rb
+
+  config.action_mailer.smtp_settings = {
+    :address   => "smtp.mandrillapp.com",
+    :port      => 587, # ports 587 and 2525 are also supported with STARTTLS
+    :enable_starttls_auto => true, # detects and uses STARTTLS
+    :user_name => "jonathan@bestpracticestore.com",
+    :password  => "C5GAohMzJJh6Kd0Pg01T8g", # SMTP password is any valid API key
+    :authentication => 'login', # Mandrill supports 'plain' or 'login'
+    :domain => 'bestpracticestore.com', # your domain to identify your server when connecting
+  }
+
+  # …
 end
+
+  

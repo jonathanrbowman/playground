@@ -24,9 +24,9 @@ body {
 }
 
 textarea {
-	resize:none;
-	padding:10px;
-	min-height:100px;
+	resize: none;
+	padding: 10px;
+	min-height: 100px;
 }
 
 a, p, h1, h2, h3, h4, label, input, form, button, td {
@@ -132,7 +132,7 @@ td {
 }
 
 .inputField {
-	padding:10px;
+	padding: 10px;
 	width: 100%;
 	height: 25px;
 	border-radius: 0px;
@@ -171,7 +171,7 @@ td {
 	font-weight: 500;
 	margin-left: auto;
 	margin-right: auto;
-	text-align:center;
+	text-align: center;
 }
 
 .signInButton:hover {
@@ -335,7 +335,7 @@ form input[type='number']::-webkit-outer-spin-button, form input[type='number']:
 }
 
 .shortField {
-	padding:10px;
+	padding: 10px;
 	width: 50%;
 	height: 25px;
 	min-width: 200px;
@@ -344,7 +344,7 @@ form input[type='number']::-webkit-outer-spin-button, form input[type='number']:
 }
 
 .shortFieldPrice {
-	padding:10px;
+	padding: 10px;
 	width: 15%;
 	min-width: 100px;
 	height: 25px;
@@ -355,7 +355,7 @@ form input[type='number']::-webkit-outer-spin-button, form input[type='number']:
 #headerControlsWrapper {
 	border-collapse: collapse;
 	position: fixed;
-	top: -85px;
+	top: -125px;
 	right: 0;
 	padding: 10px;
 	padding-top: 0px;
@@ -376,28 +376,43 @@ form input[type='number']::-webkit-outer-spin-button, form input[type='number']:
 
 #signOut:hover {
 	background-color: rgba(225,93,106, 1);
-	
 }
 
 #headerSignOut {
 	background-color: rgba(225,93,106, 1);
-	opacity:.7;
+	opacity: .7;
 	display: block;
 	padding: 10px;
 }
 
 #headerSignOut:hover {
-	opacity:1;
-}	
+	opacity: 1;
+}
 
 #headerModify {
 	background-color: rgba(105,157,200, .7);
-	opacity:.7;
+	opacity: .7;
 	display: block;
 	padding: 10px;
 }
 
 #headerModify:hover {
 	background-color: rgba(105,157,200, 1);
-	opacity:1;
+	opacity: 1;
+}
+
+#headerViewAll {
+	background-color: rgba(110,190,82, .7);
+	opacity: .7;
+	display: block;
+	padding: 10px;
+}
+
+#headerViewAll:hover {
+	background-color: rgba(110,190,82, 1);
+	opacity: 1;
+}
+
+#viewProjects:hover {
+	background-color: rgba(110,190,82, 1);
 }

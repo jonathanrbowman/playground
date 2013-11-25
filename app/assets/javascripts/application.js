@@ -26,7 +26,7 @@ $("#headerControlsWrapper").mouseenter(function() {
 });
 
 $("#headerControlsWrapper").mouseleave(function() {
-	$(this).css({"top" : "-85px"});
+	$(this).css({"top" : "-125px"});
 });
 
 $('textarea').autosize();
