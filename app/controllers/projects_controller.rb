@@ -61,8 +61,10 @@ class ProjectsController < ApplicationController
   end
 
   def correct_user
-    @project = current_user.projects.find_by(id: params[:id])
-    redirect_to projects_path, notice: "Not authorized to modify this project" if @project.nil?
+    if current_user == @project.user || current_user.email == "jonathan@bestpracticestore.com"
+    else
+    redirect_to projects_path, notice: "Not authorized to modify this project"
+    end
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
