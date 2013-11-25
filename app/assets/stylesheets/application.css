@@ -13,11 +13,15 @@
  */
 
 html {
+	width: 100%;
+	height: 100%;
 	margin: 0;
 	padding: 0;
 }
 
 body {
+	width: 100%;
+	height: 100%;
 	background-color: #64918b;
 	margin: 0;
 	padding: 0;
@@ -54,6 +58,7 @@ a, p, h1, h2, h3, h4, label, input, form, button, td {
 
 #frontPageWrapper {
 	width: 80%;
+	max-width:500px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 100px;
@@ -154,7 +159,7 @@ td {
 	font-weight: 500;
 	margin-left: auto;
 	margin-right: auto;
-	text-align:center;
+	text-align: center;
 }
 
 #cancelButton {
